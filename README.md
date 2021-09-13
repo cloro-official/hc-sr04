@@ -6,6 +6,7 @@ This code uses the HC-SR04 ultrasonic sensor to determine its distance in which 
 ![Tinkercad Setup](https://i.imgur.com/1xVfIgz.png)
 
 ### Credits
-Manuel Angelo R. Abanilla
-Ken Adrian Alupit
-Patrick Babala
+- Manuel Angelo R. Abanilla
+- Ken Adrian Alupit
+- Patrick Babala
+
