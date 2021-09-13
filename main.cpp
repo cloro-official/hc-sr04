@@ -38,7 +38,7 @@ void loop() {
   long duration = pulseIn(ultrasonic_echo, HIGH);
   long inch =  (duration/2) / 29.1;
 
-  // Terniary operation to determine if the LED lights up according to > distance triggered
+  // Ternary operation to determine if the LED lights up according to > distance triggered
   digitalWrite(led_1, (inch >= 11) ? HIGH : LOW);
   digitalWrite(led_2, (inch >= 11) ? HIGH : LOW);
   digitalWrite(led_3, (inch >= 13) ? HIGH : LOW);
