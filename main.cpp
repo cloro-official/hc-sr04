@@ -36,16 +36,16 @@ void loop() {
 
   // Output Ultrasonic's distance output
   long duration = pulseIn(ultrasonic_echo, HIGH);
-  long inch =  (duration/2) / 29.1;
+  long centi =  (duration/2) / 29;
 
   // Determine
-  digitalWrite(led_1, (inch >= 35) ? HIGH : LOW);
-  digitalWrite(led_2, (inch >= 50) ? HIGH : LOW);
-  digitalWrite(led_3, (inch >= 150) ? HIGH : LOW);
-  digitalWrite(led_4, (inch >= 200) ? HIGH : LOW);
-  digitalWrite(led_5, (inch >= 250) ? HIGH : LOW);
-  digitalWrite(led_6, (inch >= 300) ? HIGH : LOW);
+  digitalWrite(led_1, (centi > 49) ? HIGH : LOW);
+  digitalWrite(led_2, (centi >= 50) ? HIGH : LOW);
+  digitalWrite(led_3, (centi >= 150) ? HIGH : LOW);
+  digitalWrite(led_4, (centi >= 200) ? HIGH : LOW);
+  digitalWrite(led_5, (centi >= 250) ? HIGH : LOW);
+  digitalWrite(led_6, (centi >= 300) ? HIGH : LOW);
   
-  // Output computed inches
-  Serial.println(inch);
+  // Output computed centimeters
+  Serial.println(centi);
 }
